@@ -1,0 +1,20 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, enum: ["student", "instructor","admin"], default: "student" },
+    completedLessons: [
+      {
+        course: { type: mongoose.Schema.Types.ObjectId, ref: "Course" },
+        section: { type: mongoose.Schema.Types.ObjectId },
+        lesson: { type: mongoose.Schema.Types.ObjectId },
+      },
+    ],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("User", userSchema);
