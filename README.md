@@ -103,6 +103,6 @@ The system leverages a non-relational model optimized for **low-latency reads**:
 
 ## 🚀 Installation
 
-1. Clone the repo: `git clone https://github.com/yourusername/edusphere.git`
+1. Clone the repo: `git clone https://github.com/Harisolla/MERN-Learning-Management-System.git`
 2. Install dependencies: `npm install`
 3. Start the server: `npm start`
